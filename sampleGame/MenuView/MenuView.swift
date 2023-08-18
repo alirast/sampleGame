@@ -41,6 +41,14 @@ final class MenuView: UIView {
         return bestScoreCounter
     }()
     
+    lazy var playButton: UIButton = {
+        let playButton = UIButton()
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.setImage(UIImage(named: "playButtonImage"), for: .normal)
+        playButton.addTarget(self, action: #selector(didTapPlayButton), for: .touchUpInside)
+        return playButton
+    }()
+    
     lazy var bottomLogoImage: UIImageView = {
         let bottomImage = UIImageView(image: UIImage(named: "bottomLogoImage"))
         bottomImage.translatesAutoresizingMaskIntoConstraints = false
@@ -55,6 +63,7 @@ final class MenuView: UIView {
         addSubview(logoView)
         addSubview(bestScoreView)
         addSubview(bestScoreCounter)
+        addSubview(playButton)
         addSubview(bottomLogoImage)
         
         NSLayoutConstraint.activate([
@@ -67,9 +76,17 @@ final class MenuView: UIView {
             bestScoreCounter.topAnchor.constraint(equalTo: bestScoreView.bottomAnchor, constant: 10),
             bestScoreCounter.centerXAnchor.constraint(equalTo: centerXAnchor),
             
+            playButton.topAnchor.constraint(equalTo: bestScoreCounter.bottomAnchor, constant: 30),
+            playButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
             bottomLogoImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             bottomLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
+    }
+    
+    
+    @objc func didTapPlayButton() {
+        print("did tap play button")
     }
     
     required init?(coder: NSCoder) {
