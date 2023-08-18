@@ -29,18 +29,34 @@ final class MenuView: UIView {
         return bestScoreLabel
     }()
     
+    lazy var bestScoreCounter: UILabel = {
+        var bestScoreCounter = UILabel()
+        bestScoreCounter.translatesAutoresizingMaskIntoConstraints = false
+        bestScoreCounter.textAlignment = .center
+        bestScoreCounter.sizeToFit()
+        bestScoreCounter.numberOfLines = 1
+        bestScoreCounter.textColor = .white
+        bestScoreCounter.text = "123"
+        bestScoreCounter.font = UIFont.boldSystemFont(ofSize: 27)
+        return bestScoreCounter
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(named: "mainGreenColor")
         addSubview(logoView)
         addSubview(bestScoreView)
+        addSubview(bestScoreCounter)
         
         NSLayoutConstraint.activate([
             logoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             logoView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             bestScoreView.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 20),
-            bestScoreView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            bestScoreView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            bestScoreCounter.topAnchor.constraint(equalTo: bestScoreView.bottomAnchor, constant: 10),
+            bestScoreCounter.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
