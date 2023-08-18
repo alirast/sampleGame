@@ -57,6 +57,14 @@ final class MenuView: UIView {
         return settingsButton
     }()
     
+    lazy var shopButton: UIButton = {
+        let shopButton = UIButton()
+        shopButton.translatesAutoresizingMaskIntoConstraints = false
+        shopButton.setImage(UIImage(named: "shopButtonImage"), for: .normal)
+        shopButton.addTarget(self, action: #selector(didTapShopButton), for: .touchUpInside)
+        return shopButton
+    }()
+    
     lazy var bottomLogoImage: UIImageView = {
         let bottomImage = UIImageView(image: UIImage(named: "bottomLogoImage"))
         bottomImage.translatesAutoresizingMaskIntoConstraints = false
@@ -73,9 +81,10 @@ final class MenuView: UIView {
         addSubview(bestScoreCounter)
         addSubview(playButton)
         addSubview(settingsButton)
+        addSubview(shopButton)
         addSubview(bottomLogoImage)
         
-        
+//TODO: - fix everything for 14 plus
         NSLayoutConstraint.activate([
             logoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             logoView.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -86,11 +95,14 @@ final class MenuView: UIView {
             bestScoreCounter.topAnchor.constraint(equalTo: bestScoreView.bottomAnchor, constant: 10),
             bestScoreCounter.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            playButton.topAnchor.constraint(equalTo: bestScoreCounter.bottomAnchor, constant: 30),
+            playButton.topAnchor.constraint(equalTo: bestScoreCounter.bottomAnchor, constant: 40),
             playButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             settingsButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor),
             settingsButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 25),
+            
+            shopButton.centerYAnchor.constraint(equalTo: playButton.centerYAnchor),
+            shopButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -25),
             
             bottomLogoImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             bottomLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor)
@@ -104,6 +116,10 @@ final class MenuView: UIView {
     
     @objc func didTapSettingsButton() {
         print("did tap settings button")
+    }
+    
+    @objc func didTapShopButton() {
+        print("did tap shop button")
     }
     
     required init?(coder: NSCoder) {
