@@ -19,7 +19,7 @@ final class MenuView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .black
+        backgroundColor = UIColor(named: "mainGreenColor")
         addSubview(logoView)
         
         NSLayoutConstraint.activate([
