@@ -41,12 +41,21 @@ final class MenuView: UIView {
         return bestScoreCounter
     }()
     
+    lazy var bottomLogoImage: UIImageView = {
+        let bottomImage = UIImageView(image: UIImage(named: "bottomLogoImage"))
+        bottomImage.translatesAutoresizingMaskIntoConstraints = false
+        bottomImage.sizeToFit()
+        bottomImage.contentMode = .scaleAspectFit
+        return bottomImage
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor(named: "mainGreenColor")
         addSubview(logoView)
         addSubview(bestScoreView)
         addSubview(bestScoreCounter)
+        addSubview(bottomLogoImage)
         
         NSLayoutConstraint.activate([
             logoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -56,7 +65,10 @@ final class MenuView: UIView {
             bestScoreView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             bestScoreCounter.topAnchor.constraint(equalTo: bestScoreView.bottomAnchor, constant: 10),
-            bestScoreCounter.centerXAnchor.constraint(equalTo: centerXAnchor)
+            bestScoreCounter.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            bottomLogoImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            bottomLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
