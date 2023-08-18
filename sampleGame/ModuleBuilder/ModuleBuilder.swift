@@ -8,8 +8,8 @@
 import UIKit
 
 class ModuleBuilder: ModuleBuilderProtocol {
-    func createMenuModule() -> UIViewController {
-        let view = ViewController()
+    func createMenuModule() -> MenuViewController {
+        let view = MenuViewController()
         return view
     }
     

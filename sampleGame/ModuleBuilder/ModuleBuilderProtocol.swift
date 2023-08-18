@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ModuleBuilderProtocol {
-    func createMenuModule() -> UIViewController
+    func createMenuModule() -> MenuViewController
     func createGameModule() -> UIViewController
     func createPauseSubModule() -> UIViewController
     func createSettingsSubModule() -> UIViewController

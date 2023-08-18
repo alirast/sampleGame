@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
+    
+    private var menuView = MenuView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view = menuView
     }
 
 

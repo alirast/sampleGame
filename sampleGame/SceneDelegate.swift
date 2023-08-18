@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        let vc = ViewController()
+        let vc = MenuViewController()
         let navigationController = UINavigationController(rootViewController: vc)
         //let moduleBuilder = ModuleBuilder()
         //let router = Router(navigationController: navigationController, moduleBuilder: moduleBuilder)
