@@ -9,15 +9,8 @@ import UIKit
 
 class PlayAgainView: UIView {
     
-    lazy var bestScoreLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.sizeToFit()
-        label.numberOfLines = 1
-        label.textColor = .white
-        label.text = "Best Score"
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+    lazy var bestScoreLabel: BestScoreLabelView = {
+        let label = BestScoreLabelView()
         return label
     }()
     
