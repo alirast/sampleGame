@@ -19,6 +19,12 @@ class PlayAgainView: UIView {
         return counterLabel
     }()
     
+    lazy var yourScoreLabel: UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
+    
     lazy var playAgainButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

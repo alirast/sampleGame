@@ -9,9 +9,10 @@ import UIKit
 
 class PlayAgainViewController: UIViewController {
     
+    private var playAgainView = PlayAgainView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view = playAgainView
     }
 }
