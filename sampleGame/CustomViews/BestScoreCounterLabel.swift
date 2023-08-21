@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: add transfering the color(?)
 class BestScoreCounterLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
