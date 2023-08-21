@@ -17,16 +17,9 @@ final class MenuView: UIView {
         return logoView
     }()
     
-    lazy var bestScoreView: UILabel = {
-        let bestScoreLabel = UILabel()
-        bestScoreLabel.translatesAutoresizingMaskIntoConstraints = false
-        bestScoreLabel.textAlignment = .center
-        bestScoreLabel.sizeToFit()
-        bestScoreLabel.numberOfLines = 1
-        bestScoreLabel.textColor = .white
-        bestScoreLabel.text = "Best Score"
-        bestScoreLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        return bestScoreLabel
+    lazy var bestScoreView: BestScoreLabelView = {
+        let label = BestScoreLabelView()
+        return label
     }()
     
     lazy var bestScoreCounter: UILabel = {
