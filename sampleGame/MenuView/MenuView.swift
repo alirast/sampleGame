@@ -22,17 +22,11 @@ final class MenuView: UIView {
         return label
     }()
     
-    lazy var bestScoreCounter: UILabel = {
-        var bestScoreCounter = UILabel()
-        bestScoreCounter.translatesAutoresizingMaskIntoConstraints = false
-        bestScoreCounter.textAlignment = .center
-        bestScoreCounter.sizeToFit()
-        bestScoreCounter.numberOfLines = 1
-        bestScoreCounter.textColor = .white
-        bestScoreCounter.text = "123"
-        bestScoreCounter.font = UIFont.boldSystemFont(ofSize: 27)
-        return bestScoreCounter
+    lazy var bestScoreCounter: BestScoreCounterLabel = {
+        let counterLabel = BestScoreCounterLabel()
+        return counterLabel
     }()
+    
     
     lazy var playButton: UIButton = {
         let playButton = UIButton()

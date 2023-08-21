@@ -18,6 +18,7 @@
 		4FBEF4CF2A93A156005EF871 /* PlayAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEF4CE2A93A156005EF871 /* PlayAgainView.swift */; };
 		4FBEF4D12A93A16B005EF871 /* PlayAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEF4D02A93A16B005EF871 /* PlayAgainViewController.swift */; };
 		4FBEF4D42A93B284005EF871 /* BestScoreLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEF4D32A93B284005EF871 /* BestScoreLabelView.swift */; };
+		4FBEF4D62A93B4FB005EF871 /* BestScoreCounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBEF4D52A93B4FB005EF871 /* BestScoreCounterLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4FBEF4CE2A93A156005EF871 /* PlayAgainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAgainView.swift; sourceTree = "<group>"; };
 		4FBEF4D02A93A16B005EF871 /* PlayAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAgainViewController.swift; sourceTree = "<group>"; };
 		4FBEF4D32A93B284005EF871 /* BestScoreLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScoreLabelView.swift; sourceTree = "<group>"; };
+		4FBEF4D52A93B4FB005EF871 /* BestScoreCounterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScoreCounterLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBEF4D32A93B284005EF871 /* BestScoreLabelView.swift */,
+				4FBEF4D52A93B4FB005EF871 /* BestScoreCounterLabel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBEF4D62A93B4FB005EF871 /* BestScoreCounterLabel.swift in Sources */,
 				4F7BA26F2A8E6E2F00CAEB3E /* MenuViewController.swift in Sources */,
 				4F7BA2852A8F67C800CAEB3E /* MenuView.swift in Sources */,
 				4F7BA27F2A8E6E7600CAEB3E /* ModuleBuilderProtocol.swift in Sources */,
